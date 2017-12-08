@@ -5,3 +5,9 @@
 *.toc
 *.pdf
 
+# HTML
+*.html
+
+# Things that may not go on github/bitbucket/public repo...
+local/
+
