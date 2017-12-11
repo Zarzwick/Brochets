@@ -1,5 +1,6 @@
-# Notes
+# READEZ MOI
 Jehan-Antoine Vayssade, Hugo Rens et Rémi Maigné
+(Et l'autre groupe ?)
 
 ## Projet
 
@@ -8,7 +9,7 @@ Le projet consiste à identifier individuellement un brochet, c'est à dire à *
 ## Collaboration
 Un autre groupe a pour but de trouver des brochets dans une image. Nos données en entrée sont donc celles qu'ils obtiennent. Afin de réaliser le projet, nous créerons dans un premier temps les données terrain ensemble (soit 6 personnes). Notre groupe pourra ensuite utiliser cette vérité terrain et éviter d'être dépendant des résultats de l'autre groupe.
 
-Ces données seront dans un fichier JSon.
+Ces données seront dans un fichier JSON.
 
 ## Pros & Cons des langages:
 
