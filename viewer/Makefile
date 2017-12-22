@@ -1,6 +1,6 @@
 CC=g++
 LN=g++
-OPT=-std=gnu++17 -Wextra -Werror -fPIC $(shell pkg-config --cflags Qt5OpenGL)
+OPT=-std=gnu++17 -Wextra -Werror -fPIC $(shell pkg-config --cflags Qt5OpenGL) -g -pg
 LIB=-lm -lstdc++ $(shell pkg-config --libs Qt5OpenGL) -lGL -lGLU
 OBJ= src/window.o src/moc_window.o src/main.o
 OBJ+=src/render.o src/moc_render.o

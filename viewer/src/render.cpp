@@ -1,21 +1,30 @@
 #include "render.h"
 
 #include <QDebug>
+#include <QWindow>
 #include <QScrollBar>
 #include <iostream>
 #include <fstream>
 
 Render::Render(QWidget *parent)
     : QGraphicsView(parent), move(false),
-      doinner(false), doouter(false),
-      id(new QLineEdit(parent))
+      doinner(false), doouter(false)
 {
-    QDirIterator folder("./", QDir::Files, QDirIterator::Subdirectories);
+    id = new QLineEdit(parent);
     id->setGeometry(5, 30, 85, 25);
     id->setEnabled(true);
     
+    connect(
+        id, &QLineEdit::textChanged,
+        [this](const QString &newValue) {
+            if(current != files.end())
+                current->id = newValue;
+        }
+    );
+    
+    QDirIterator folder("./", QDir::Files, QDirIterator::Subdirectories);
     //! skip the first one : the root folder itself
-    //folder.next();
+    folder.next();
     
     while(folder.hasNext())
     {
@@ -45,6 +54,8 @@ Render::Render(QWidget *parent)
     inner->setBrush(QBrush(QColor(0, 255, 0, 125)));
     outer = scene.addRect(0,0, 0, 0);
     outer->setBrush(QBrush(QColor(255, 0, 0, 50)));
+    
+    ((QWidget*)parent)->setWindowTitle(current->filename);
 }
 
 Render::~Render()
@@ -98,14 +109,16 @@ void Render::mouseMoveEvent(QMouseEvent *event)
 void Render::next()
 {
     if(current != files.end())
+      current++;
+      
+    if(current != files.end())
     {
-        current->id = id->text();
-        current++;
         QImage image(current->filename);
         background->setPixmap(QPixmap::fromImage(image));
         inner->setRect(current->inner);
         outer->setRect(current->outer);
         id->setText(current->id);
+        ((QWidget*)parent())->setWindowTitle(current->filename);
     }
 }
 
@@ -113,13 +126,13 @@ void Render::previous()
 {
     if(current != files.begin())
     {
-        current->id = id->text();
         current--;
         QImage image(current->filename);
         background->setPixmap(QPixmap::fromImage(image));
         inner->setRect(current->inner);
         outer->setRect(current->outer);
         id->setText(current->id);
+        ((QWidget*)parent())->setWindowTitle(current->filename);
     }
 }
 
