@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QGraphicsView>
+#include <QLineEdit>
 #include <QMouseEvent>
 #include <QDirIterator>
 #include <QGraphicsLineItem>
@@ -35,6 +36,7 @@ class Render : public QGraphicsView
         virtual void wheelEvent(QWheelEvent* event);
         virtual void keyPressEvent(QKeyEvent*);
     private:
+        QLineEdit *id;
         QGraphicsScene scene;
         QGraphicsRectItem *inner;
         QGraphicsRectItem *outer;

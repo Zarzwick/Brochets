@@ -7,12 +7,15 @@
 
 Render::Render(QWidget *parent)
     : QGraphicsView(parent), move(false),
-      doinner(false), doouter(false)
+      doinner(false), doouter(false),
+      id(new QLineEdit(parent))
 {
-    QDirIterator folder("../local/", QDir::Files, QDirIterator::Subdirectories);
+    QDirIterator folder("./", QDir::Files, QDirIterator::Subdirectories);
+    id->setGeometry(5, 30, 85, 25);
+    id->setEnabled(true);
     
     //! skip the first one : the root folder itself
-    folder.next();
+    //folder.next();
     
     while(folder.hasNext())
     {
@@ -96,11 +99,13 @@ void Render::next()
 {
     if(current != files.end())
     {
+        current->id = id->text();
         current++;
         QImage image(current->filename);
         background->setPixmap(QPixmap::fromImage(image));
         inner->setRect(current->inner);
         outer->setRect(current->outer);
+        id->setText(current->id);
     }
 }
 
@@ -108,11 +113,13 @@ void Render::previous()
 {
     if(current != files.begin())
     {
+        current->id = id->text();
         current--;
         QImage image(current->filename);
         background->setPixmap(QPixmap::fromImage(image));
         inner->setRect(current->inner);
         outer->setRect(current->outer);
+        id->setText(current->id);
     }
 }
 
