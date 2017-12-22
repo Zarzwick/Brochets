@@ -1,0 +1,503 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<?xml-stylesheet type='text/xsl' href='image_metadata_stylesheet.xsl'?>
+<dataset>
+<name>imglab dataset</name>
+<comment>Created by imglab tool.</comment>
+<images>
+  <image file='CAMPAGNE1-150414/01D.JPG'>
+    <box top='1925' left='950' width='1386' height='326'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/01G.JPG'>
+    <box top='1420' left='1240' width='1061' height='286'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/02D.JPG'>
+    <box top='1310' left='1365' width='1196' height='351'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/02G.JPG'>
+    <box top='1435' left='1045' width='1501' height='411'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/03Da.JPG'>
+    <box top='1580' left='730' width='1651' height='346'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/03Db.JPG'>
+    <box top='1485' left='820' width='1646' height='381'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/03Ga.JPG'>
+    <box top='1430' left='885' width='1541' height='406'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/03Gb.JPG'>
+    <box top='1145' left='890' width='1576' height='436'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/04D.JPG'>
+    <box top='1180' left='700' width='2591' height='711'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/04Ga.JPG'>
+    <box top='1835' left='1055' width='1531' height='421'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/04Gb.JPG'>
+    <box top='1255' left='900' width='1451' height='371'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/05D.JPG'>
+    <box top='1400' left='765' width='1621' height='401'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/05G.JPG'>
+    <box top='1485' left='1000' width='1756' height='376'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/06D.JPG'>
+    <box top='1155' left='1005' width='1566' height='361'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/06G.JPG'>
+    <box top='1215' left='1095' width='1401' height='366'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/07D.JPG'>
+    <box top='945' left='895' width='1821' height='391'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/07G.JPG'>
+    <box top='1940' left='1400' width='1526' height='356'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/08D.JPG'>
+    <box top='1895' left='1175' width='1431' height='351'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/08G.JPG'>
+    <box top='1415' left='1290' width='1471' height='346'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/10D.JPG'>
+    <box top='1245' left='1135' width='1356' height='306'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/10G.JPG'>
+    <box top='1120' left='1190' width='1371' height='231'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/11D.JPG'>
+    <box top='1280' left='1140' width='1266' height='266'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/11G.JPG'>
+    <box top='940' left='2945' width='256' height='1161'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/12D.JPG'>
+    <box top='1230' left='1110' width='1766' height='431'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/12G.JPG'>
+    <box top='1290' left='1060' width='1726' height='456'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/13D.JPG'>
+    <box top='1960' left='1075' width='1441' height='356'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/13G.JPG'>
+    <box top='1940' left='1170' width='1376' height='356'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/14D.JPG'>
+    <box top='1490' left='1285' width='1606' height='336'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/14G.JPG'>
+    <box top='1575' left='990' width='1626' height='416'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/15D(b).JPG'>
+    <box top='1170' left='910' width='1811' height='376'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/15D.JPG'>
+    <box top='1650' left='1075' width='1411' height='296'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/15G(d).JPG'>
+    <box top='1180' left='1010' width='1786' height='441'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/15G.JPG'>
+    <box top='1810' left='1310' width='1371' height='411'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/16D.JPG'>
+    <box top='1185' left='960' width='1515' height='260'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/16G.JPG'>
+    <box top='1485' left='1450' width='886' height='166'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/17D.JPG'>
+    <box top='1155' left='1330' width='1136' height='231'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/17G.JPG'>
+    <box top='1170' left='1345' width='1216' height='276'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/18D.JPG'>
+    <box top='1185' left='1020' width='1496' height='306'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/18G.JPG'>
+    <box top='1210' left='1000' width='1531' height='371'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/19D.JPG'>
+    <box top='1175' left='1340' width='1006' height='246'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/19G.JPG'>
+    <box top='1210' left='1190' width='1641' height='266'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/20D.JPG'>
+    <box top='1220' left='1095' width='1456' height='341'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/20G.JPG'>
+    <box top='1260' left='1225' width='1441' height='346'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/21D.JPG'>
+    <box top='1385' left='1090' width='1496' height='321'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/21G.JPG'>
+    <box top='1215' left='910' width='1501' height='406'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0045.JPG'>
+    <box top='1100' left='800' width='2821' height='996'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0046.JPG'>
+    <box top='800' left='700' width='2656' height='661'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0047.JPG'>
+    <box top='915' left='605' width='2736' height='531'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0048.JPG'>
+    <box top='925' left='640' width='2676' height='616'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0049.JPG'>
+    <box top='905' left='825' width='2701' height='626'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0050.JPG'>
+    <box top='960' left='605' width='2726' height='676'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0051.JPG'>
+    <box top='900' left='515' width='2706' height='736'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0052.JPG'>
+    <box top='1015' left='910' width='2591' height='626'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0053.JPG'>
+    <box top='1025' left='920' width='2591' height='616'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0054.JPG'>
+    <box top='925' left='675' width='2646' height='556'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0055.JPG'>
+    <box top='960' left='730' width='2631' height='631'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0056.JPG'>
+    <box top='890' left='535' width='3256' height='771'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0057.JPG'>
+    <box top='875' left='350' width='3316' height='586'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0058.JPG'>
+    <box top='870' left='570' width='2556' height='751'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0059.JPG'>
+    <box top='995' left='690' width='2601' height='546'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0060.JPG'>
+    <box top='730' left='690' width='2616' height='666'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0061.JPG'>
+    <box top='790' left='710' width='2686' height='496'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0062.JPG'>
+    <box top='660' left='510' width='2756' height='846'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0063.JPG'>
+    <box top='700' left='515' width='2766' height='686'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0064.JPG'>
+    <box top='695' left='505' width='2776' height='631'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0065.JPG'>
+    <box top='815' left='705' width='2641' height='596'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0066.JPG'>
+    <box top='830' left='650' width='2686' height='466'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0067.JPG'>
+    <box top='725' left='530' width='2776' height='706'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0068.JPG'>
+    <box top='955' left='510' width='2801' height='541'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0069.JPG'>
+    <box top='935' left='1215' width='1566' height='356'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0070.JPG'>
+    <box top='915' left='1335' width='1551' height='411'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0071.JPG'>
+    <box top='1030' left='1025' width='1556' height='356'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0072.JPG'>
+    <box top='1025' left='1010' width='1591' height='356'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0073.JPG'>
+    <box top='1030' left='1220' width='1761' height='356'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0074.JPG'>
+    <box top='1100' left='1110' width='1796' height='326'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0075.JPG'>
+    <box top='905' left='580' width='2776' height='661'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0076.JPG'>
+    <box top='865' left='720' width='2846' height='476'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0077.JPG'>
+    <box top='955' left='605' width='2311' height='586'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0078.JPG'>
+    <box top='870' left='910' width='2326' height='541'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0079.JPG'>
+    <box top='895' left='645' width='2606' height='736'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0080.JPG'>
+    <box top='830' left='665' width='2701' height='606'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0081.JPG'>
+    <box top='955' left='710' width='2616' height='661'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0082.JPG'>
+    <box top='750' left='620' width='2681' height='486'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0083.JPG'>
+    <box top='890' left='1555' width='1566' height='391'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0084.JPG'>
+    <box top='900' left='1430' width='1601' height='346'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0085.JPG'>
+    <box top='885' left='1420' width='1526' height='441'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0086.JPG'>
+    <box top='780' left='1430' width='1686' height='486'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0087.JPG'>
+    <box top='775' left='1380' width='1736' height='506'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0088.JPG'>
+    <box top='795' left='1200' width='1751' height='336'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0089.JPG'>
+    <box top='820' left='775' width='2521' height='566'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0090.JPG'>
+    <box top='775' left='730' width='2571' height='501'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0091.JPG'>
+    <box top='790' left='1340' width='1616' height='456'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0092.JPG'>
+    <box top='930' left='1355' width='1671' height='471'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0093.JPG'>
+    <box top='745' left='1245' width='1766' height='386'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0094.JPG'>
+    <box top='760' left='1160' width='1771' height='331'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0095.JPG'>
+    <box top='750' left='980' width='2326' height='551'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0096.JPG'>
+    <box top='700' left='860' width='2361' height='616'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0097.JPG'>
+    <box top='680' left='895' width='2456' height='571'>
+      <label>fish</label>
+    </box>
+  </image>
+  <image file='CAMPAGNE1-150414/IMG_0098.JPG'>
+    <box top='680' left='770' width='2491' height='466'>
+      <label>fish</label>
+    </box>
+  </image>
+</images>
+</dataset>
