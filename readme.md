@@ -39,3 +39,6 @@ Ces données seront dans un fichier JSON.
 * JavaScript:
 	* ...
 
+## Création des fichiers JSON
+
+Les fichiers JSON des campagnes 1 et 2 ont été réalisées avec [imglab](https://github.com/davisking/dlib/tree/master/tools/imglab) en XML puis converties avec le script présent dans le dossier `groundtruth/`, et celles des campagnes 3 et 4 avec le "viewer" en C++/Qt dans `viewer/`.
