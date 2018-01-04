@@ -11,3 +11,6 @@
 # Things that may not go on github/bitbucket/public repo...
 local/
 
+# Python cache
+__pycache__/
+
