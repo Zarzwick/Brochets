@@ -56,10 +56,10 @@ def lut(P: int) -> Mapping[int, int]
     m[0] = acc
     # For each intermediary length:
     for l in range(1, P):
-        acc += 1
         # Compute each circular shift:
         for shift in range(0, P):
             # TODO
+            acc += 1
             m[] = acc
     # And finally, for 111..111
     m[(2**P)-1] = acc
@@ -86,11 +86,15 @@ lbpHist = zeros((m, n))
 lbpImage = lbp(image, lbpParams[0], lbpParams[1])
 labelMap = lut(lbpParams[0])
 
+region = 0
 for tileBounds in TiledIterator(lbpImage, subdiv):
     tile = image[tileBounds]
     size = tileBounds.subshape
     for row in range(size[0]):
         for col in range(size[1]):
             label = tile[row, col]
-            lbpHist[labelMap[label]] += 1
-
+            if (uniform2(label)):
+                lbpHist[region, labelMap[label]] += 1
+            else:
+                lbpHist[region, n] += 1
+    region += 1
