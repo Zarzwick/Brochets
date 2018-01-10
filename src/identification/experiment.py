@@ -11,7 +11,7 @@ from numpy import *
 from matplotlib.pyplot import imread, plot
 from tilediterator import TiledIterator
 from skimage.feature import local_binary_pattern as lbp
-from typing import Mapping
+from typing import Mapping, Tuple
 
 
 # Check an image argument is provided.
@@ -35,7 +35,19 @@ lbpParams = (8, 2)
 # In the paper, 2-uniforms LBP are used. As we will later need to know
 # the number of labels a LBP can produce (n), it is defined here:
 def n_for_2_uniform_lbp(lbpParams: LBPParams) -> int:
-    return 2 + P*(P-1)
+    return 2 + lbpParams[0]*(lbpParams[0]-1)
+
+# Generate uniform patterns...
+# This is done in a terrific but pythonic way.
+def generate_uniform_patterns(length, ones):
+    # Generate the base pattern
+    basePattern = array([1]*ones + [0]*(length-ones))
+    # And apply circular shifts
+    patterns = []
+    for i in range(length):
+        # Magical line
+        patterns.append(int(''.join(str(c) for c in list(roll(basePattern, -i))), base = 2))
+    return patterns
 
 # Unformal proof of this (on P = 4)
 # I consider the length l of the 111...111 inside the pattern.
@@ -48,19 +60,15 @@ def n_for_2_uniform_lbp(lbpParams: LBPParams) -> int:
 #
 # We have to generate a mapping from those values to {0, 1, ..., n-1} in order
 # to put them in an histogram. n will be any pattern not matching u2.
-def lut(P: int) -> Mapping[int, int]
-    return None # It's a WIP
+def lut(P: int) -> Mapping[int, int]:
     m = {}
     acc = 0
     # For 000..000
     m[0] = acc
-    # For each intermediary length:
     for l in range(1, P):
-        # Compute each circular shift:
-        for shift in range(0, P):
-            # TODO
+        for pattern in generate_uniform_patterns(P, l):
             acc += 1
-            m[] = acc
+            m[pattern] = acc
     # And finally, for 111..111
     m[(2**P)-1] = acc
     return m
@@ -83,18 +91,19 @@ m = subdiv[0] * subdiv[1]
 # the number of pixels that represent a label of LBP.
 # Jehan, note that I preallocated the table ! In python !
 lbpHist = zeros((m, n))
-lbpImage = lbp(image, lbpParams[0], lbpParams[1])
+lbpImage = lbp(image, lbpParams[0], lbpParams[1], method='uniform')
 labelMap = lut(lbpParams[0])
 
-region = 0
-for tileBounds in TiledIterator(lbpImage, subdiv):
-    tile = image[tileBounds]
-    size = tileBounds.subshape
-    for row in range(size[0]):
-        for col in range(size[1]):
-            label = tile[row, col]
-            if (uniform2(label)):
-                lbpHist[region, labelMap[label]] += 1
-            else:
-                lbpHist[region, n] += 1
-    region += 1
+#region = 0
+#for tileBounds in TiledIterator(lbpImage, subdiv):
+    #tile = image[tileBounds]
+    #size = shape(tile)
+    #for row in range(size[0]):
+        #for col in range(size[1]):
+            #label = tile[row, col]
+            #if (uniform2(label)):
+                #lbpHist[region, labelMap[label]] += 1
+            #else:
+                #lbpHist[region, n] += 1
+    #region += 1
+
