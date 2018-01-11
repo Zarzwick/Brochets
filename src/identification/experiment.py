@@ -14,6 +14,7 @@ from skimage.feature import local_binary_pattern as lbp
 from typing import Mapping, Tuple
 
 
+
 # Check an image argument is provided.
 import sys
 if len(sys.argv) != 2:
@@ -28,14 +29,35 @@ else:
 
 #imagev = reshape(image, (-1, 1))
 
+
+
 # Here I define the LBP parameters as a tuple.
 LBPParams = Tuple[int, int] # type: A triplet (P, R)
 lbpParams = (8, 2)
+
+
+
+# Define if a pattern is n-uniform
+def uniform_pattern(pattern: int, n: int = 2) -> bool:
+    patternStr = bin(pattern)[2:]
+    patternLen = len(patternStr)
+    nbTransitions = 0
+
+    for i in range(patternLen):
+        j = (i+1) % patternLen
+        if patternStr[i] != patternStr[j]:
+            nbTransitions += 1
+
+    return nbTransitions <= n
+
+
 
 # In the paper, 2-uniforms LBP are used. As we will later need to know
 # the number of labels a LBP can produce (n), it is defined here:
 def n_for_2_uniform_lbp(lbpParams: LBPParams) -> int:
     return 2 + lbpParams[0]*(lbpParams[0]-1)
+
+
 
 # Generate uniform patterns...
 # This is done in a terrific but pythonic way.
@@ -48,6 +70,8 @@ def generate_uniform_patterns(length, ones):
         # Magical line
         patterns.append(int(''.join(str(c) for c in list(roll(basePattern, -i))), base = 2))
     return patterns
+
+
 
 # Unformal proof of this (on P = 4)
 # I consider the length l of the 111...111 inside the pattern.
@@ -73,9 +97,13 @@ def lut(P: int) -> Mapping[int, int]:
     m[(2**P)-1] = acc
     return m
 
+
+
 # The goal is to subdivide the picture in different ways (3 here) and to
 # concatenate their histograms.
 subdivs = [(3, 12)]#, (4, 16)]
+
+
 
 # Here is the computation of one histogram (defined in Face Recognition with
 # Local Binary Patterns).
@@ -86,6 +114,8 @@ subdiv = subdivs[0]
 n = n_for_2_uniform_lbp(lbpParams) + 1
 m = subdiv[0] * subdiv[1]
 
+
+
 # Then, we have an histogram that consists of the concatenation of m
 # histograms, each one of size n. It means, for one region we keep
 # the number of pixels that represent a label of LBP.
@@ -93,6 +123,8 @@ m = subdiv[0] * subdiv[1]
 lbpHist = zeros((m, n))
 lbpImage = lbp(image, lbpParams[0], lbpParams[1], method='uniform')
 labelMap = lut(lbpParams[0])
+
+
 
 #region = 0
 #for tileBounds in TiledIterator(lbpImage, subdiv):
