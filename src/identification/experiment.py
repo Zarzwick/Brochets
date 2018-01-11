@@ -38,8 +38,9 @@ lbpParams = (8, 2)
 
 
 # Define if a pattern is n-uniform
-def uniform_pattern(pattern: int, n: int = 2) -> bool:
-    patternStr = bin(pattern)[2:]
+def uniform_pattern(pattern: int, P: int, n: int = 2) -> bool:
+
+    patternStr = format(pattern, '0'+str(P)+'b')
     patternLen = len(patternStr)
     nbTransitions = 0
 
@@ -62,13 +63,17 @@ def n_for_2_uniform_lbp(lbpParams: LBPParams) -> int:
 # Generate uniform patterns...
 # This is done in a terrific but pythonic way.
 def generate_uniform_patterns(length, ones):
+
     # Generate the base pattern
     basePattern = array([1]*ones + [0]*(length-ones))
+    
     # And apply circular shifts
     patterns = []
+
     for i in range(length):
         # Magical line
         patterns.append(int(''.join(str(c) for c in list(roll(basePattern, -i))), base = 2))
+    
     return patterns
 
 
@@ -85,16 +90,22 @@ def generate_uniform_patterns(length, ones):
 # We have to generate a mapping from those values to {0, 1, ..., n-1} in order
 # to put them in an histogram. n will be any pattern not matching u2.
 def lut(P: int) -> Mapping[int, int]:
+
+    # Create a dictionnary, and init. the accumulator.
     m = {}
     acc = 0
-    # For 000..000
+    
+    # The first, obvious pattern is 0b000..000
     m[0] = acc
+    
     for l in range(1, P):
         for pattern in generate_uniform_patterns(P, l):
             acc += 1
             m[pattern] = acc
-    # And finally, for 111..111
+    
+    # And finally, the last and obvious is 0b111..111
     m[(2**P)-1] = acc
+
     return m
 
 
@@ -121,21 +132,26 @@ m = subdiv[0] * subdiv[1]
 # the number of pixels that represent a label of LBP.
 # Jehan, note that I preallocated the table ! In python !
 lbpHist = zeros((m, n))
-lbpImage = lbp(image, lbpParams[0], lbpParams[1], method='uniform')
+lbpImage = lbp(image, lbpParams[0], lbpParams[1]) # …, method = 'uniform')
 labelMap = lut(lbpParams[0])
 
 
 
-#region = 0
-#for tileBounds in TiledIterator(lbpImage, subdiv):
-    #tile = image[tileBounds]
-    #size = shape(tile)
-    #for row in range(size[0]):
-        #for col in range(size[1]):
-            #label = tile[row, col]
-            #if (uniform2(label)):
-                #lbpHist[region, labelMap[label]] += 1
-            #else:
-                #lbpHist[region, n] += 1
-    #region += 1
+# Effective creation of the histogram.
+region = 0
+for tileBounds in TiledIterator(lbpImage, subdiv):
+    tile = image[tileBounds]
+    size = shape(tile)
+    
+    for row in range(size[0]):
+        for col in range(size[1]):
+            # Get the LBP at (row, col)
+            label = tile[row, col]
+            # And count it
+            if (uniform_pattern(label, lbpParams[0], 2)):
+                lbpHist[region, labelMap[label]] += 1
+            else:
+                lbpHist[region, n-1] += 1
+    
+    region += 1
 
