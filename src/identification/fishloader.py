@@ -3,6 +3,7 @@ import json
 from matplotlib.pyplot import imread, imshow
 from numpy import array
 from typing import Tuple
+from fish import Fish
 
 class FishLoader(object):
     '''Permanent fish loader
@@ -22,7 +23,7 @@ class FishLoader(object):
 
 
 
-    def __getitem__(self, key: Tuple[int, int]):
+    def __getitem__(self, key: Fish):
         '''Retrieve an fish image from a given campaign ID and fish number, [campaignID, fishNumber]
         Campaign ID are from 1 to countCampaign (constructor parameter)
         Fish number are from 0 to count of fish in the json'''
