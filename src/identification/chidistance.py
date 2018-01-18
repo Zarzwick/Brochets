@@ -16,6 +16,5 @@ def weighted_chi_square_distance(h1, h2, regionsWeights) -> float:
         den = (h2[region] + h1[region])
         distance += w * sum(divide(num, den, out=zeros_like(num), where=den!=0))
     
-    print(distance)
     return distance
 
