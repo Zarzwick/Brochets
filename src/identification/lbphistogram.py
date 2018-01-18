@@ -12,20 +12,20 @@ from matplotlib.pyplot import imread, plot
 from tilediterator import TiledIterator
 from skimage.feature import local_binary_pattern as lbp
 from typing import Mapping, Tuple
-
+from fish import Fish
 
 
 # Check an image argument is provided.
-import sys
-if len(sys.argv) != 2:
-    imagePath = '../../local/CAMPAGNE1-150414/IMG_0090.JPG'
-    image = imread(imagePath)
-    image = image[760:1300, 710:3360, 1]
-    #print("Usage: {} IMAGE".format(sys.argv[0]))
-    #sys.exit(1)
-else:
-    imagePath = sys.argv[1]
-    image = imread(imagePath)
+#import sys
+#if len(sys.argv) != 2:
+#    imagePath = '../../local/CAMPAGNE1-150414/IMG_0090.JPG'
+#    image = imread(imagePath)
+#    image = image[760:1300, 710:3360, 1]
+#    #print("Usage: {} IMAGE".format(sys.argv[0]))
+#    #sys.exit(1)
+#else:
+#    imagePath = sys.argv[1]
+#    image = imread(imagePath)
 
 #imagev = reshape(image, (-1, 1))
 
@@ -33,7 +33,6 @@ else:
 
 # Here I define the LBP parameters as a tuple.
 LBPParams = Tuple[int, int] # type: A triplet (P, R)
-lbpParams = (8, 2)
 
 
 
@@ -108,50 +107,56 @@ def lut(P: int) -> Mapping[int, int]:
 
     return m
 
+def lbp_histrogram( image ):
+    '''Process LBP Histogram from a picture of a fish.'''
 
+    lbpParams = (8, 2)
 
-# The goal is to subdivide the picture in different ways (3 here) and to
-# concatenate their histograms.
-subdivs = [(3, 12)]#, (4, 16)]
+    # The goal is to subdivide the picture in different ways (3 here) and to
+    # concatenate their histograms.
+    subdivs = [(3, 12)]#, (4, 16)]
 
+    # Here is the computation of one histogram (defined in Face Recognition with
+    # Local Binary Patterns).
+    # We shall first find n (the number of possible values of LBP) and m (the 
+    # number of regions). Note that n += 1 because we want a value that represent
+    # non-uniformity.
+    subdiv = subdivs[0]
+    n = n_for_2_uniform_lbp(lbpParams) + 1
+    m = subdiv[0] * subdiv[1]
 
+    # Then, we have an histogram that consists of the concatenation of m
+    # histograms, each one of size n. It means, for one region we keep
+    # the number of pixels that represent a label of LBP.
+    # Jehan, note that I preallocated the table ! In python !
+    lbpHist = zeros((m, n))
+    lbpImage = lbp(image, lbpParams[0], lbpParams[1]) # …, method = 'uniform')
+    labelMap = lut(lbpParams[0])
 
-# Here is the computation of one histogram (defined in Face Recognition with
-# Local Binary Patterns).
-# We shall first find n (the number of possible values of LBP) and m (the 
-# number of regions). Note that n += 1 because we want a value that represent
-# non-uniformity.
-subdiv = subdivs[0]
-n = n_for_2_uniform_lbp(lbpParams) + 1
-m = subdiv[0] * subdiv[1]
-
-
-
-# Then, we have an histogram that consists of the concatenation of m
-# histograms, each one of size n. It means, for one region we keep
-# the number of pixels that represent a label of LBP.
-# Jehan, note that I preallocated the table ! In python !
-lbpHist = zeros((m, n))
-lbpImage = lbp(image, lbpParams[0], lbpParams[1]) # …, method = 'uniform')
-labelMap = lut(lbpParams[0])
-
-
-
-# Effective creation of the histogram.
-region = 0
-for tileBounds in TiledIterator(lbpImage, subdiv):
-    tile = image[tileBounds]
-    size = shape(tile)
+    # Effective creation of the histogram.
+    region = 0
+    for tileBounds in TiledIterator(lbpImage, subdiv):
+        tile = image[tileBounds]
+        size = shape(tile)
     
-    for row in range(size[0]):
-        for col in range(size[1]):
-            # Get the LBP at (row, col)
-            label = tile[row, col]
-            # And count it
-            if (uniform_pattern(label, lbpParams[0], 2)):
-                lbpHist[region, labelMap[label]] += 1
-            else:
-                lbpHist[region, n-1] += 1
+        for row in range(size[0]):
+            for col in range(size[1]):
+                # Get the LBP at (row, col)
+                label = tile[row, col]
+                # And count it
+                if (uniform_pattern(label, lbpParams[0], 2)):
+                    lbpHist[region, labelMap[label]] += 1
+                else:
+                    lbpHist[region, n-1] += 1
     
-    region += 1
+        region += 1
 
+    return lbpHist
+
+
+
+def plot_lbphistogram( lbphistogram ):
+    '''Plot LBP Histogram'''
+
+    for h in lbphistogram:
+        plot( h )
