@@ -5,6 +5,9 @@
 *.toc
 *.pdf
 
+# Visual
+.vs/
+
 # HTML
 *.html
 
@@ -13,4 +16,3 @@ local/
 
 # Python cache
 __pycache__/
-
