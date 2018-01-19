@@ -4,7 +4,7 @@
 <name>imglab dataset</name>
 <comment>Created by imglab tool.</comment>
 <images>
-  <image file='0002_101114_10D.JPG'>
+  <image file='CAMPAGNE2-101114/0002_101114_10D.JPG'>
     <box top='1539' left='366' width='2905' height='583'>
       <label>fish</label>
     </box>
@@ -12,7 +12,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0002_101114_10G.JPG'>
+  <image file='CAMPAGNE2-101114/0002_101114_10G.JPG'>
     <box top='1506' left='444' width='2938' height='748'>
       <label>fish</label>
     </box>
@@ -20,7 +20,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0002_101114_P10D.JPG'>
+  <image file='CAMPAGNE2-101114/0002_101114_P10D.JPG'>
     <box top='1714' left='636' width='2049' height='449'>
       <label>fish</label>
     </box>
@@ -28,7 +28,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0003_101114_14D.JPG'>
+  <image file='CAMPAGNE2-101114/0003_101114_14D.JPG'>
     <box top='1468' left='874' width='2607' height='485'>
       <label>fish</label>
     </box>
@@ -36,7 +36,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0003_101114_14G.JPG'>
+  <image file='CAMPAGNE2-101114/0003_101114_14G.JPG'>
     <box top='1438' left='714' width='2753' height='895'>
       <label>fish</label>
     </box>
@@ -44,7 +44,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0003_101114_P14a.JPG'>
+  <image file='CAMPAGNE2-101114/0003_101114_P14a.JPG'>
     <box top='1092' left='966' width='2219' height='577'>
       <label>fish</label>
     </box>
@@ -52,7 +52,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0003_101114_P14b.JPG'>
+  <image file='CAMPAGNE2-101114/0003_101114_P14b.JPG'>
     <box top='1062' left='1094' width='2223' height='549'>
       <label>fish</label>
     </box>
@@ -60,7 +60,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0005_101114_21D.JPG'>
+  <image file='CAMPAGNE2-101114/0005_101114_21D.JPG'>
     <box top='1298' left='624' width='2725' height='529'>
       <label>fish</label>
     </box>
@@ -68,7 +68,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0005_101114_21G.JPG'>
+  <image file='CAMPAGNE2-101114/0005_101114_21G.JPG'>
     <box top='1263' left='390' width='2746' height='955'>
       <label>fish</label>
     </box>
@@ -76,7 +76,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0005_101114_P21D.JPG'>
+  <image file='CAMPAGNE2-101114/0005_101114_P21D.JPG'>
     <box top='1322' left='900' width='1881' height='425'>
       <label>fish</label>
     </box>
@@ -84,7 +84,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0029_101114_23DG.JPG'>
+  <image file='CAMPAGNE2-101114/0029_101114_23DG.JPG'>
     <box top='1382' left='500' width='2505' height='577'>
       <label>fish</label>
     </box>
@@ -92,7 +92,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0029_101114_23D.JPG'>
+  <image file='CAMPAGNE2-101114/0029_101114_23D.JPG'>
     <box top='1641' left='339' width='2728' height='562'>
       <label>fish</label>
     </box>
@@ -100,7 +100,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0029_101114_P23D.JPG'>
+  <image file='CAMPAGNE2-101114/0029_101114_P23D.JPG'>
     <box top='1168' left='1008' width='1967' height='431'>
       <label>fish</label>
     </box>
@@ -108,7 +108,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='002A_101114_24D.JPG'>
+  <image file='CAMPAGNE2-101114/002A_101114_24D.JPG'>
     <box top='1696' left='886' width='2507' height='553'>
       <label>fish</label>
     </box>
@@ -116,7 +116,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='002A_101114_24G.JPG'>
+  <image file='CAMPAGNE2-101114/002A_101114_24G.JPG'>
     <box top='1048' left='552' width='2829' height='641'>
       <label>fish</label>
     </box>
@@ -124,7 +124,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='002A_101114_P24D.JPG'>
+  <image file='CAMPAGNE2-101114/002A_101114_P24D.JPG'>
     <box top='1780' left='1118' width='1496' height='280'>
       <label>fish</label>
     </box>
@@ -132,7 +132,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='002B_101114_20D.JPG'>
+  <image file='CAMPAGNE2-101114/002B_101114_20D.JPG'>
     <box top='1372' left='604' width='2891' height='763'>
       <label>fish</label>
     </box>
@@ -140,7 +140,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='002B_101114_20G.JPG'>
+  <image file='CAMPAGNE2-101114/002B_101114_20G.JPG'>
     <box top='1448' left='448' width='2971' height='539'>
       <label>fish</label>
     </box>
@@ -148,7 +148,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='002B_101114_P20D.JPG'>
+  <image file='CAMPAGNE2-101114/002B_101114_P20D.JPG'>
     <box top='1548' left='958' width='1943' height='521'>
       <label>fish</label>
     </box>
@@ -156,7 +156,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='002D_101114_17D.JPG'>
+  <image file='CAMPAGNE2-101114/002D_101114_17D.JPG'>
     <box top='1242' left='318' width='2761' height='487'>
       <label>fish</label>
     </box>
@@ -164,7 +164,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='002D_101114_17G.JPG'>
+  <image file='CAMPAGNE2-101114/002D_101114_17G.JPG'>
     <box top='1412' left='508' width='2869' height='839'>
       <label>fish</label>
     </box>
@@ -172,7 +172,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='002D_101114_P17D.JPG'>
+  <image file='CAMPAGNE2-101114/002D_101114_P17D.JPG'>
     <box top='1514' left='1052' width='1651' height='349'>
       <label>fish</label>
     </box>
@@ -180,7 +180,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='002E_101114_25D.JPG'>
+  <image file='CAMPAGNE2-101114/002E_101114_25D.JPG'>
     <box top='1566' left='634' width='2151' height='623'>
       <label>fish</label>
     </box>
@@ -188,7 +188,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='002E_101114_25G.JPG'>
+  <image file='CAMPAGNE2-101114/002E_101114_25G.JPG'>
     <box top='1532' left='458' width='2191' height='623'>
       <label>fish</label>
     </box>
@@ -196,7 +196,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='002E_101114_P25D.JPG'>
+  <image file='CAMPAGNE2-101114/002E_101114_P25D.JPG'>
     <box top='1282' left='659' width='1650' height='274'>
       <label>fish</label>
     </box>
@@ -204,7 +204,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0030_101114_06D.JPG'>
+  <image file='CAMPAGNE2-101114/0030_101114_06D.JPG'>
     <box top='1278' left='220' width='3123' height='559'>
       <label>fish</label>
     </box>
@@ -212,7 +212,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0030_101114_06G.JPG'>
+  <image file='CAMPAGNE2-101114/0030_101114_06G.JPG'>
     <box top='1404' left='222' width='2932' height='916'>
       <label>fish</label>
     </box>
@@ -220,7 +220,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0030_101114_P06.JPG'>
+  <image file='CAMPAGNE2-101114/0030_101114_P06.JPG'>
     <box top='1080' left='580' width='2199' height='683'>
       <label>fish</label>
     </box>
@@ -228,7 +228,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0031_101114_11D.JPG'>
+  <image file='CAMPAGNE2-101114/0031_101114_11D.JPG'>
     <box top='1342' left='598' width='2777' height='495'>
       <label>fish</label>
     </box>
@@ -236,7 +236,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0031_101114_11G.JPG'>
+  <image file='CAMPAGNE2-101114/0031_101114_11G.JPG'>
     <box top='1230' left='514' width='2687' height='761'>
       <label>fish</label>
     </box>
@@ -244,7 +244,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0031_101114_P11D.JPG'>
+  <image file='CAMPAGNE2-101114/0031_101114_P11D.JPG'>
     <box top='1386' left='970' width='2019' height='523'>
       <label>fish</label>
     </box>
@@ -252,7 +252,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0032_101114_22D.JPG'>
+  <image file='CAMPAGNE2-101114/0032_101114_22D.JPG'>
     <box top='1632' left='482' width='2385' height='409'>
       <label>fish</label>
     </box>
@@ -260,7 +260,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0032_101114_22G.JPG'>
+  <image file='CAMPAGNE2-101114/0032_101114_22G.JPG'>
     <box top='1468' left='770' width='2391' height='519'>
       <label>fish</label>
     </box>
@@ -268,7 +268,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0032_101114_P22D.JPG'>
+  <image file='CAMPAGNE2-101114/0032_101114_P22D.JPG'>
     <box top='1368' left='974' width='1523' height='397'>
       <label>fish</label>
     </box>
@@ -276,7 +276,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0036_101114_18D.JPG'>
+  <image file='CAMPAGNE2-101114/0036_101114_18D.JPG'>
     <box top='1238' left='816' width='2581' height='539'>
       <label>fish</label>
     </box>
@@ -284,7 +284,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0036_101114_18G.JPG'>
+  <image file='CAMPAGNE2-101114/0036_101114_18G.JPG'>
     <box top='1504' left='518' width='2695' height='799'>
       <label>fish</label>
     </box>
@@ -292,7 +292,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0036_101114_P18D.JPG'>
+  <image file='CAMPAGNE2-101114/0036_101114_P18D.JPG'>
     <box top='1578' left='826' width='2245' height='595'>
       <label>fish</label>
     </box>
@@ -300,7 +300,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0037_101114_09D.JPG'>
+  <image file='CAMPAGNE2-101114/0037_101114_09D.JPG'>
     <box top='1290' left='338' width='2609' height='483'>
       <label>fish</label>
     </box>
@@ -308,7 +308,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0037_101114_09G.JPG'>
+  <image file='CAMPAGNE2-101114/0037_101114_09G.JPG'>
     <box top='1352' left='388' width='2721' height='699'>
       <label>fish</label>
     </box>
@@ -316,7 +316,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0037_101114_P09D.JPG'>
+  <image file='CAMPAGNE2-101114/0037_101114_P09D.JPG'>
     <box top='1418' left='532' width='1799' height='389'>
       <label>fish</label>
     </box>
@@ -324,7 +324,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0038_101114_19D.JPG'>
+  <image file='CAMPAGNE2-101114/0038_101114_19D.JPG'>
     <box top='1432' left='634' width='2935' height='513'>
       <label>fish</label>
     </box>
@@ -332,7 +332,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0038_101114_19G.JPG'>
+  <image file='CAMPAGNE2-101114/0038_101114_19G.JPG'>
     <box top='1146' left='454' width='2963' height='691'>
       <label>fish</label>
     </box>
@@ -340,7 +340,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0038_101114_P19D.JPG'>
+  <image file='CAMPAGNE2-101114/0038_101114_P19D.JPG'>
     <box top='1352' left='904' width='2089' height='469'>
       <label>fish</label>
     </box>
@@ -348,7 +348,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0039_101114_16D.JPG'>
+  <image file='CAMPAGNE2-101114/0039_101114_16D.JPG'>
     <box top='1304' left='400' width='3069' height='607'>
       <label>fish</label>
     </box>
@@ -356,7 +356,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0039_101114_16G.JPG'>
+  <image file='CAMPAGNE2-101114/0039_101114_16G.JPG'>
     <box top='1238' left='412' width='3031' height='1001'>
       <label>fish</label>
     </box>
@@ -364,7 +364,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0039_101114_P16D.JPG'>
+  <image file='CAMPAGNE2-101114/0039_101114_P16D.JPG'>
     <box top='922' left='634' width='2617' height='801'>
       <label>fish</label>
     </box>
@@ -372,7 +372,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='003A_101114_12D.JPG'>
+  <image file='CAMPAGNE2-101114/003A_101114_12D.JPG'>
     <box top='1326' left='584' width='2733' height='611'>
       <label>fish</label>
     </box>
@@ -380,7 +380,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='003A_101114_12G.JPG'>
+  <image file='CAMPAGNE2-101114/003A_101114_12G.JPG'>
     <box top='1330' left='372' width='3065' height='685'>
       <label>fish</label>
     </box>
@@ -388,7 +388,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='003A_101114_P12D.JPG'>
+  <image file='CAMPAGNE2-101114/003A_101114_P12D.JPG'>
     <box top='1302' left='758' width='2049' height='493'>
       <label>fish</label>
     </box>
@@ -396,7 +396,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0698_101114_03D.JPG'>
+  <image file='CAMPAGNE2-101114/0698_101114_03D.JPG'>
     <box top='1014' left='-3' width='3838' height='925'>
       <label>fish</label>
     </box>
@@ -404,7 +404,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0698_101114_03G.JPG'>
+  <image file='CAMPAGNE2-101114/0698_101114_03G.JPG'>
     <box top='1113' left='150' width='3733' height='880'>
       <label>fish</label>
     </box>
@@ -412,7 +412,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='0698_101114_P03D.JPG'>
+  <image file='CAMPAGNE2-101114/0698_101114_P03D.JPG'>
     <box top='1278' left='720' width='2488' height='919'>
       <label>fish</label>
     </box>
@@ -420,7 +420,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='1450_101114_15D.JPG'>
+  <image file='CAMPAGNE2-101114/1450_101114_15D.JPG'>
     <box top='1254' left='306' width='3115' height='628'>
       <label>fish</label>
     </box>
@@ -428,7 +428,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='1450_101114_15G.JPG'>
+  <image file='CAMPAGNE2-101114/1450_101114_15G.JPG'>
     <box top='1269' left='237' width='3307' height='970'>
       <label>fish</label>
     </box>
@@ -436,7 +436,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='1450_101114_P15D.JPG'>
+  <image file='CAMPAGNE2-101114/1450_101114_P15D.JPG'>
     <box top='1089' left='612' width='2410' height='679'>
       <label>fish</label>
     </box>
@@ -444,7 +444,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='1828_101114_05D.JPG'>
+  <image file='CAMPAGNE2-101114/1828_101114_05D.JPG'>
     <box top='1299' left='117' width='3637' height='664'>
       <label>fish</label>
     </box>
@@ -452,7 +452,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='1828_101114_05G.JPG'>
+  <image file='CAMPAGNE2-101114/1828_101114_05G.JPG'>
     <box top='1185' left='99' width='3787' height='835'>
       <label>fish</label>
     </box>
@@ -460,7 +460,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='1828_101114_P05D.JPG'>
+  <image file='CAMPAGNE2-101114/1828_101114_P05D.JPG'>
     <box top='1446' left='717' width='2176' height='535'>
       <label>fish</label>
     </box>
@@ -468,7 +468,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='3587_101114_01D.JPG'>
+  <image file='CAMPAGNE2-101114/3587_101114_01D.JPG'>
     <box top='780' left='-32' width='3913' height='897'>
       <label>fish</label>
     </box>
@@ -476,7 +476,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='3587_101114_01G.JPG'>
+  <image file='CAMPAGNE2-101114/3587_101114_01G.JPG'>
     <box top='876' left='64' width='3777' height='893'>
       <label>fish</label>
     </box>
@@ -484,7 +484,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='3587_101114_P01D.JPG'>
+  <image file='CAMPAGNE2-101114/3587_101114_P01D.JPG'>
     <box top='1280' left='700' width='2685' height='721'>
       <label>fish</label>
     </box>
@@ -492,7 +492,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='4403_101114_07D.JPG'>
+  <image file='CAMPAGNE2-101114/4403_101114_07D.JPG'>
     <box top='1400' left='336' width='3045' height='509'>
       <label>fish</label>
     </box>
@@ -500,7 +500,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='4403_101114_07G.JPG'>
+  <image file='CAMPAGNE2-101114/4403_101114_07G.JPG'>
     <box top='1416' left='236' width='3117' height='521'>
       <label>fish</label>
     </box>
@@ -508,7 +508,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='4403_101114_P07D.JPG'>
+  <image file='CAMPAGNE2-101114/4403_101114_P07D.JPG'>
     <box top='928' left='432' width='2545' height='613'>
       <label>fish</label>
     </box>
@@ -516,7 +516,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='4630_101114_02D.JPG'>
+  <image file='CAMPAGNE2-101114/4630_101114_02D.JPG'>
     <box top='1176' left='-20' width='3745' height='737'>
       <label>fish</label>
     </box>
@@ -524,7 +524,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='4630_101114_02G.JPG'>
+  <image file='CAMPAGNE2-101114/4630_101114_02G.JPG'>
     <box top='1324' left='88' width='3793' height='709'>
       <label>fish</label>
     </box>
@@ -532,7 +532,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='4630_101114_P02D.JPG'>
+  <image file='CAMPAGNE2-101114/4630_101114_P02D.JPG'>
     <box top='1504' left='672' width='2337' height='613'>
       <label>fish</label>
     </box>
@@ -540,7 +540,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='4677_101114_04D.JPG'>
+  <image file='CAMPAGNE2-101114/4677_101114_04D.JPG'>
     <box top='1240' left='24' width='3693' height='757'>
       <label>fish</label>
     </box>
@@ -548,7 +548,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='4677_101114_04G.JPG'>
+  <image file='CAMPAGNE2-101114/4677_101114_04G.JPG'>
     <box top='1164' left='0' width='3825' height='969'>
       <label>fish</label>
     </box>
@@ -556,7 +556,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='4677_101114_P04D.JPG'>
+  <image file='CAMPAGNE2-101114/4677_101114_P04D.JPG'>
     <box top='1216' left='128' width='3537' height='785'>
       <label>fish</label>
     </box>
@@ -564,7 +564,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='6342_101114_08D.JPG'>
+  <image file='CAMPAGNE2-101114/6342_101114_08D.JPG'>
     <box top='1476' left='240' width='2769' height='577'>
       <label>fish</label>
     </box>
@@ -572,7 +572,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='6342_101114_08G.JPG'>
+  <image file='CAMPAGNE2-101114/6342_101114_08G.JPG'>
     <box top='1340' left='392' width='3041' height='713'>
       <label>fish</label>
     </box>
@@ -580,7 +580,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='6342_101114_P08D.JPG'>
+  <image file='CAMPAGNE2-101114/6342_101114_P08D.JPG'>
     <box top='1220' left='440' width='2433' height='741'>
       <label>fish</label>
     </box>
@@ -588,7 +588,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='9E7E_101114_13D.JPG'>
+  <image file='CAMPAGNE2-101114/9E7E_101114_13D.JPG'>
     <box top='1476' left='604' width='2409' height='465'>
       <label>fish</label>
     </box>
@@ -596,7 +596,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='9E7E_101114_13G.JPG'>
+  <image file='CAMPAGNE2-101114/9E7E_101114_13G.JPG'>
     <box top='1392' left='724' width='2345' height='533'>
       <label>fish</label>
     </box>
@@ -604,7 +604,7 @@
       <label>inner_fish</label>
     </box>
   </image>
-  <image file='9E7E_101114_P13D.JPG'>
+  <image file='CAMPAGNE2-101114/9E7E_101114_P13D.JPG'>
     <box top='1256' left='304' width='2413' height='769'>
       <label>fish</label>
     </box>
