@@ -50,7 +50,7 @@ class FishLoader(object):
         return fish
 
 
-    def getFishByName(self, key: FishName):
+    def get_fish_by_name(self, key: FishName):
         '''Retrieve all the fishes in JSONS with the given "id"'''
 
         fishes = []
@@ -75,7 +75,7 @@ class FishLoader(object):
         return fishes
 
 
-    def getName(self, fish: Fish):
+    def get_name(self, fish: Fish):
         '''Retrieve name of the fish with a given campaign and number.'''
 
         try:

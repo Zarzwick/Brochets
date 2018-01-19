@@ -34,4 +34,3 @@ class FishRepertory(object):
 						fish.append( None )
 
 				self.fishesRef.append( fish )
-
