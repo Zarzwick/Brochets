@@ -67,9 +67,27 @@ class FishLoader(object):
                 if dataFish['id'] == key[1]:                    
                     fishes.append((key[0], numberFish))
 
-                numberFish += 1;
+                numberFish += 1
 
         except KeyError:
            print('There is not such fish')
           
         return fishes
+
+
+    def getName(self, fish: Fish):
+        '''Retrieve name of the fish with a given campaign and number.'''
+
+        try:
+            dataCampaign = self.dataCampaigns[fish[0] - 1]
+            fishKeys = list(dataCampaign)
+            idFish = fishKeys[fish[1]]
+
+            dataFish = dataCampaign[idFish]
+
+            fishName = (fish[0], str(dataFish['id']))
+
+        except KeyError:
+           print('There is not such fish')
+
+        return fishName
