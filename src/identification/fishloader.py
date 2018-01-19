@@ -3,7 +3,7 @@ import json
 from matplotlib.pyplot import imread, imshow
 from numpy import array
 from typing import Tuple
-from fish import Fish
+from fish import Fish, FishName
 
 class FishLoader(object):
     '''Permanent fish loader
@@ -48,3 +48,28 @@ class FishLoader(object):
            print('There is not such fish')
           
         return fish
+
+
+    def getFishByName(self, key: FishName):
+        '''Retrieve all the fishes in JSONS with the given "id"'''
+
+        fishes = []
+
+        try:
+            dataCampaign = self.dataCampaigns[key[0] - 1]
+            fishKeys = list(dataCampaign)
+
+            numberFish = 0
+
+            for idFish in fishKeys:
+                dataFish = dataCampaign[idFish]
+
+                if dataFish['id'] == key[1]:                    
+                    fishes.append((key[0], numberFish))
+
+                numberFish += 1;
+
+        except KeyError:
+           print('There is not such fish')
+          
+        return fishes
