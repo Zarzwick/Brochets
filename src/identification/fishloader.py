@@ -1,9 +1,9 @@
-﻿#!  /usr/bin/env python
+#!  /usr/bin/env python
 import json
 from matplotlib.pyplot import imread, imshow
 from numpy import array
 from typing import Tuple
-from fish import Fish
+from fish import Fish, FishName
 
 class FishLoader(object):
     '''Permanent fish loader
@@ -48,3 +48,46 @@ class FishLoader(object):
            print('There is not such fish')
           
         return fish
+
+
+    def get_fish_by_name(self, key: FishName):
+        '''Retrieve all the fishes in JSONS with the given "id"'''
+
+        fishes = []
+
+        try:
+            dataCampaign = self.dataCampaigns[key[0] - 1]
+            fishKeys = list(dataCampaign)
+
+            numberFish = 0
+
+            for idFish in fishKeys:
+                dataFish = dataCampaign[idFish]
+
+                if dataFish['id'] == key[1]:                    
+                    fishes.append((key[0], numberFish))
+
+                numberFish += 1
+
+        except KeyError:
+           print('There is not such fish')
+          
+        return fishes
+
+
+    def get_name(self, fish: Fish):
+        '''Retrieve name of the fish with a given campaign and number.'''
+
+        try:
+            dataCampaign = self.dataCampaigns[fish[0] - 1]
+            fishKeys = list(dataCampaign)
+            idFish = fishKeys[fish[1]]
+
+            dataFish = dataCampaign[idFish]
+
+            fishName = (fish[0], str(dataFish['id']))
+
+        except KeyError:
+           print('There is not such fish')
+
+        return fishName
