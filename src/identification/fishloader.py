@@ -38,11 +38,13 @@ class FishLoader(object):
             pathToPicture = '../../local/' + idFish
             bounds = dataFish['outer']
             
-            topLeft = array([int(bounds[1]), int(bounds[0])])
-            bottomRight = topLeft + array([int(bounds[3]), int(bounds[2])])
+            # (x, y)
+            topLeft = array([int(bounds[0]), int(bounds[1])])
+            bottomRight = topLeft + array([int(bounds[2]), int(bounds[3])])
 
             fish = imread(pathToPicture)
-            fish = fish[topLeft[0]:bottomRight[0], topLeft[1]:bottomRight[1], 1]
+            fish = fish[topLeft[1]:bottomRight[1], topLeft[0]:bottomRight[0], 1]
+            # Access using [y, x]
 
         except KeyError:
            print('There is not such fish')
