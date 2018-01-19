@@ -38,7 +38,7 @@ class FishLoader(object):
             pathToPicture = '../../local/' + idFish
             bounds = dataFish['outer']
             
-            topLeft = array([int(bounds[0]), int(bounds[1])])
+            topLeft = array([int(bounds[1]), int(bounds[0])])
             bottomRight = topLeft + array([int(bounds[3]), int(bounds[2])])
 
             fish = imread(pathToPicture)
