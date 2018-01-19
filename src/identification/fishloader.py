@@ -1,4 +1,4 @@
-﻿#!  /usr/bin/env python
+#!  /usr/bin/env python
 import json
 from matplotlib.pyplot import imread, imshow
 from numpy import array
