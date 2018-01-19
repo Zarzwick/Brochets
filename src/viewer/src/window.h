@@ -15,7 +15,7 @@ namespace ui
     {
         Q_OBJECT
         public:
-            explicit Window(QWidget *parent = 0);
+            explicit Window(QWidget *parent = 0, const QString &filename = "entities.json");
             ~Window();
             
             virtual void resizeEvent(QResizeEvent *);

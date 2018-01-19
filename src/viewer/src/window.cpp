@@ -9,12 +9,12 @@
 
 namespace ui
 {
-    Window::Window(QWidget *parent)
+    Window::Window(QWidget *parent, const QString &filename)
         : QMainWindow(parent)
     {
         setMinimumSize(800, 600);
         
-        render = new Render(this);
+        render = new Render(this, filename);
         render->setAlignment(Qt::AlignLeft | Qt::AlignTop);
         //render->setFixedSize(size());
         setCentralWidget(render);

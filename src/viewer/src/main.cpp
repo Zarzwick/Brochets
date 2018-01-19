@@ -14,7 +14,9 @@ int main(int argc, char *argv[])
     format.setProfile(QSurfaceFormat::CoreProfile);
     QSurfaceFormat::setDefaultFormat(format);
     
-    ui::Window viewer;
+    QString filename = argc > 2 ? "entites.json" : argv[1];
+    
+    ui::Window viewer(nullptr, filename);
     viewer.show();
     
     return app.exec();

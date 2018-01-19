@@ -6,9 +6,10 @@
 #include <iostream>
 #include <fstream>
 
-Render::Render(QWidget *parent)
+Render::Render(QWidget *parent, const QString &filename)
     : QGraphicsView(parent), move(false),
-      doinner(false), doouter(false)
+      doinner(false), doouter(false),
+      filename(filename)
 {
     id = new QLineEdit(parent);
     id->setGeometry(5, 30, 85, 25);
@@ -22,18 +23,21 @@ Render::Render(QWidget *parent)
         }
     );
     
+    QDir dir("../local");
     QDirIterator folder("./", QDir::Files, QDirIterator::Subdirectories);
     //! skip the first one : the root folder itself
     folder.next();
     
     while(folder.hasNext())
     {
+        QString filename = dir.relativeFilePath(folder.fileInfo().canonicalFilePath());
         FileInfo info;
-            info.filename = folder.fileInfo().canonicalFilePath();
+            info.filename = filename;
             info.inner = QRect{0,0,0,0};
             info.outer = QRect{0,0,0,0};
         files.push_back(info);
         folder.next();
+        std::cout << filename.toLatin1().data() << std::endl;
     }
 
     setScene(&scene);
@@ -56,6 +60,10 @@ Render::Render(QWidget *parent)
     outer->setBrush(QBrush(QColor(255, 0, 0, 50)));
     
     ((QWidget*)parent)->setWindowTitle(current->filename);
+    
+    std::cout << "-------------------------" << std::endl;
+    
+    load();
 }
 
 Render::~Render()
@@ -138,30 +146,35 @@ void Render::previous()
 
 void Render::save()
 {
-    QDir dir("../local");
     json::value v;
     json::object o;
     
     for(auto &it : files)
     {
-        QString filename = dir.relativeFilePath(it.filename);
         json::object tmp = {
             { "inner", {it.inner.x(), it.inner.y(), it.inner.width(), it.inner.height()} },
             { "outer", {it.outer.x(), it.outer.y(), it.outer.width(), it.outer.height()} },
             { "id", it.id.toLatin1().data() }
         };
-        o[filename.toLatin1().data()] = tmp;
+        o[it.filename.toLatin1().data()] = tmp;
     }
     
-    std::ofstream file("entities.json");
+    std::ofstream file(filename.toLatin1().data());
     json::dump(file, o);
 }
 
 void Render::load()
 {
+    char *buffer = nullptr;
+    json::value v;
+    json::object o;
+    
     try
     {
-        std::ifstream file("entities.json");
+        std::ifstream file(filename.toLatin1().data());
+        
+        if(!file.is_open())
+            return;
         
         file.seekg(0, std::ios::end);
         int length = file.tellg();
@@ -171,17 +184,66 @@ void Render::load()
         file.close();
         
         json::parser p(buffer);
-        json::value v;
         p.parse(v);
         
-        std::cout << v.type_name() << std::endl;
+        o = v.as<json::object>();
         
-        delete [] buffer;
+        std::cout << v.type_name() << std::endl;
     }
     catch(const std::exception& e)
     {
-        std::cerr << e.what() << '\n';
+        std::cerr << __LINE__
+                  << " >> "
+                  << e.what()
+                  << '\n';
+        if(buffer) delete [] buffer;
+        return;
     }
+        
+    for(auto &it : o)
+    {
+        FilesStorageIt file = find(QString(it.first.c_str()));
+        if(file != files.end())
+        {
+            try
+            {
+                std::cout << it.first << std::endl;
+                json::object fish = it.second.as<json::object>();
+                file->id = fish["id"].as<std::string>().c_str();
+                
+                json::array outer = fish["outer"].as<json::array>();
+                json::array inner = fish["inner"].as<json::array>();
+                
+                if(outer.size() != 4 || inner.size() != 4)
+                    continue;
+                    
+                file->outer = QRect(
+                    outer[0].as<int>(),
+                    outer[1].as<int>(),
+                    outer[2].as<int>(),
+                    outer[3].as<int>()
+                );
+                    
+                file->inner = QRect(
+                    inner[0].as<int>(),
+                    inner[1].as<int>(),
+                    inner[2].as<int>(),
+                    inner[3].as<int>()
+                );
+            }
+            catch(const std::exception& e)
+            {
+                std::cerr << __LINE__
+                          << " >> "
+                          << e.what()
+                          << '\n';
+                return;
+            }
+        }
+    }
+    
+    if(buffer)
+        delete [] buffer;
 }
 
 void Render::mousePressEvent(QMouseEvent *event)

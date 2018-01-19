@@ -21,13 +21,26 @@ struct FileInfo
 class Render : public QGraphicsView
 {
     public:
-        Render(QWidget *parent = 0);
+        using FilesStorage = std::list<FileInfo>;
+        using FilesStorageIt = FilesStorage::iterator;
+    public:
+        Render(QWidget *parent = 0, const QString &filename = "entities.json");
         virtual ~Render();
         
         void next();
         void previous();
         void save();
         void load();
+        
+        inline FilesStorageIt find(QString filename)
+        {
+            return std::find_if(
+                std::begin(files), std::end(files),
+                [&]( const FileInfo &v ){
+                    return v.filename == filename;
+                }
+            );
+        }
         
         virtual void mouseMoveEvent(QMouseEvent*);
         virtual void mousePressEvent(QMouseEvent*);
@@ -43,9 +56,10 @@ class Render : public QGraphicsView
         QGraphicsPixmapItem *background;
         QPointF start, origin;
     private:
-        std::list<FileInfo> files;
-        std::list<FileInfo>::iterator current;
+        FilesStorage files;
+        FilesStorageIt current;
         bool move, doinner, doouter;
+        QString filename;
 };
 
 #endif
