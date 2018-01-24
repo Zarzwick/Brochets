@@ -6,8 +6,10 @@ from typing import Tuple
 from chidistance import weighted_chi_square_distance
 
 def best_match(fish: Fish, candidates, chiWeights = [1]*36 ):
-    '''Find the closest fishes in candidates to the fish
-    chiWeights used for distances calculations.'''
+    '''
+    Find the closest fishes in candidates to the fish
+    chiWeights used for distances calculations.
+    '''
 
     fishLoader = FishLoader()
 
@@ -29,3 +31,4 @@ def best_match(fish: Fish, candidates, chiWeights = [1]*36 ):
     distances = sorted(distances, key=lambda tuple: tuple[1])
 
     return distances
+

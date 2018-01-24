@@ -1,4 +1,4 @@
-#!  /usr/bin/env python
+#! /usr/bin/env python
 import json
 from matplotlib.pyplot import imread, imshow
 from numpy import array
@@ -47,7 +47,7 @@ class FishLoader(object):
             # Access using [y, x]
 
         except KeyError:
-           print('There is not such fish')
+            print('There is not such fish')
           
         return fish
 
@@ -90,6 +90,6 @@ class FishLoader(object):
             fishName = (fish[0], str(dataFish['id']))
 
         except KeyError:
-           print('There is not such fish')
+            print('There is not such fish')
 
         return fishName
