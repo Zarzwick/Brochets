@@ -1,5 +1,4 @@
 #!  /usr/bin/env python
-
 import json
 from numpy import array
 from typing import Tuple
@@ -59,3 +58,23 @@ class FishRepertory(object):
                         return True
 
         return False        
+
+
+
+    def get_fish_row(self, fish: FishName):
+        '''Retrieve row number of the fish in the log file.'''
+
+        rowID : int = 0
+        # Check each row.
+        for ref in self.fishesRef:
+            refA = ref[fish[0] - 1]
+            if refA is not None:
+                # If fishes are on the same row, they are the same.
+                if refA[1] == fish[1]:
+                    print(rowID)
+                    return rowID
+            
+            rowID = rowID + 1
+
+        # Couldn't find the corresponding row.
+        return -1

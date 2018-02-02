@@ -5,7 +5,7 @@ from lbphistogram import lbp_histrogram
 from typing import Tuple
 from chidistance import weighted_chi_square_distance
 
-def best_match(fish: Fish, candidates, chiWeights = [1]*36 ):
+def best_match(fish: Fish, candidates, sort: bool, chiWeights = [1]*36 ):
     '''
     Find the closest fishes in candidates to the fish
     chiWeights used for distances calculations.
@@ -27,8 +27,9 @@ def best_match(fish: Fish, candidates, chiWeights = [1]*36 ):
 
         distances.append((candidate, distance))
 
-    # Sort according to the distance.
-    distances = sorted(distances, key=lambda tuple: tuple[1])
+    if( sort ):
+        # Sort according to the distance.
+        distances = sorted(distances, key=lambda tuple: tuple[1])
 
     return distances
 
