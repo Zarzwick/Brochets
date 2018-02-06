@@ -71,7 +71,6 @@ class FishRepertory(object):
             if refA is not None:
                 # If fishes are on the same row, they are the same.
                 if refA[1] == fish[1]:
-                    print(rowID)
                     return rowID
             
             rowID = rowID + 1

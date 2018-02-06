@@ -1,9 +1,10 @@
-#! /usr/bin/env python
+#!  /usr/bin/env python
 import json
 from matplotlib.pyplot import imread, imshow
 from numpy import array
 from typing import Tuple
 from fish import Fish, FishName
+import string
 
 class FishLoader(object):
     '''Permanent fish loader
@@ -88,6 +89,23 @@ class FishLoader(object):
             dataFish = dataCampaign[idFish]
 
             fishName = (fish[0], str(dataFish['id']))
+
+        except KeyError:
+            print('There is not such fish')
+
+        return fishName
+
+
+
+    def get_fish_photo_name(self, fish: Fish):
+        '''Retrieve the information of the pose (left, right, carried) of the fish with a given campaign and number.'''
+
+        try:
+            dataCampaign = self.dataCampaigns[fish[0] - 1]
+            photoName = list(dataCampaign.keys())[fish[1]]
+
+            return photoName
+
 
         except KeyError:
             print('There is not such fish')
