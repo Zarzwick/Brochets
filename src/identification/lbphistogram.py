@@ -13,6 +13,7 @@ from tilediterator import TiledIterator
 from skimage.feature import local_binary_pattern as lbp
 from typing import Mapping, Tuple
 from fish import Fish
+import numpy as np # Debug, should be handled, but is not...
 
 
 # Check an image argument is provided.
@@ -107,6 +108,16 @@ def lut(P: int) -> Mapping[int, int]:
 
     return m
 
+
+
+def plot_lbphistogram( lbphistogram ):
+    '''Plot LBP Histogram'''
+
+    for h in lbphistogram:
+        plot( h )
+
+
+
 def lbp_histrogram( image ):
     '''Process LBP Histogram from a picture of a fish.'''
 
@@ -138,6 +149,7 @@ def lbp_histrogram( image ):
     for tileBounds in TiledIterator(lbpImage, subdiv):
         tile = image[tileBounds]
         size = shape(tile)
+        area = size[0] * size[1]
     
         for row in range(size[0]):
             for col in range(size[1]):
@@ -149,14 +161,11 @@ def lbp_histrogram( image ):
                 else:
                     lbpHist[region, n-1] += 1
     
+        # Normalise
+        lbpHist[region] = lbpHist[region] / area
+
         region += 1
 
+    #lbpHist = normalise_lbphistogram(lbpHist)
     return lbpHist
 
-
-
-def plot_lbphistogram( lbphistogram ):
-    '''Plot LBP Histogram'''
-
-    for h in lbphistogram:
-        plot( h )
