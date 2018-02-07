@@ -133,7 +133,7 @@ import json
 import csv
 from match import cross_match_from_hist
 
-# ResultType = Tuple(FishName, Fish, array, distance[], photoName)
+# ResultType = Tuple(FishName, Fish, lbp_histograms, distance[], photoName)
 fishLoader = FishLoader()
 fishRepertory = FishRepertory()
 
@@ -151,6 +151,7 @@ for fish in fishRepertory.fishesRef:
             for fishPhoto in fishPhotos:
                 photoInBox = fishLoader[fishPhoto]
                 photoFileName = fishLoader.get_fish_photo_name(fishPhoto)
+                # Create new data with empty distances for the moment (processed later).
                 fishesData.append((fishName, fishPhoto, lbp_histrogram(photoInBox), [], photoFileName))
 
                 progressPhoto = progressPhoto + 1
@@ -180,7 +181,7 @@ save_fishesdata(fishesDataWithDistances, "../../results/LBP_Histograms/lbp_histo
 fishesDataWithDistances = load_fishesdata("../../results/LBP_Histograms/lbp_histograms_with_distances.json")
 
 
-
+# Save the results into a csv to be exploited with Excel for instance.
 save_results_to_csv(fishesDataWithDistances, "../../results/distances_results.csv", fishRepertory)
 
 
@@ -188,6 +189,8 @@ save_results_to_csv(fishesDataWithDistances, "../../results/distances_results.cs
 
 # Save and load functionnalities for histograms
 def save_fishesdata(fishesData, fileName):
+    '''Save fishesData (results) into a JSON file.'''
+
     with open(fileName, 'w') as file:
         fishesToWrite = []
         # Convert numpy array to list for serialization.
@@ -199,6 +202,8 @@ def save_fishesdata(fishesData, fileName):
 
 
 def load_fishesdata(fileName):
+    '''Load fishesData (results) from a JSON file.'''
+
     with open(fileName) as file:
         fishesDataLoadedJson = json.load(file)
         fishesData = []
@@ -209,7 +214,10 @@ def load_fishesdata(fileName):
 
     return fishesData
 
+
+
 def save_results_to_csv(fishesData, fileName, fishRepertory : FishRepertory):
+    '''Save fishesData (results) into a CSV file.'''
 
     with open(fileName, 'w') as csvfile:
         csvWriter = csv.writer(csvfile)

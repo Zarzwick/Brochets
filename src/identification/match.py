@@ -37,6 +37,7 @@ def best_match(fish: Fish, candidates, sort: bool, chiWeights=[1] * 36):
 
 
 def cross_match_from_hist(fishesData, chiWeights=[1] * 36):
+    '''Compare a serie of fishesData from generateresults.py between them, and fill the distances[] slot with the results.'''
 
     fishesDataWithDistances = []
 
